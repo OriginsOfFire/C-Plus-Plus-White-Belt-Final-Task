@@ -1,4 +1,4 @@
-# C-White-Belt-Final-Task
+# C-Plus-Plus-White-Belt-Final-Task
 Final task from "C++ Programming Fundamentals: White Belt"
 
 Необходимо написать программу на С++, которая реализует работу с простой базой данных (сокращённо «БД»). Программа будет общаться с пользователем через стандартный ввод и вывод (потоки stdin и stdout).
