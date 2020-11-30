@@ -5,19 +5,35 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
 #ifndef C_PLUS_PLUS_WHITE_BELT_FINAL_TASK_DATABASE_H
 #define C_PLUS_PLUS_WHITE_BELT_FINAL_TASK_DATABASE_H
 
-using std::map;
-using std::string;
-using std::vector;
-using std::find;
-using std::stringstream;
-
+using namespace std;
+class Date{
+private:
+    int year;
+    int month;
+    int day;
+public:
+    Date(int _year, int _month, int _day){
+        year = _year;
+        month = _month;
+        day = _day;
+    }
+    
+};
 class Database {
 private:
     map<string, vector<string>> events;
-
+    int AssembleNumber(const string& res);
+    int GetYear(const string& date);
+    int GetMonth(const string& date);
+    int GetDay(const string& date);
+    void PrintEvents(const vector<string>& current);
+    bool FindStringInVector(const vector<string>& current, const string& event);
 public:
     Database() = default;;
     ~Database()= default;;
