@@ -23,26 +23,43 @@ public:
         month = _month;
         day = _day;
     }
-    
+
+    int GetYear() const{
+        return year;
+    }
+
+    int GetMonth() const{
+        return month;
+    }
+
+    int GetDay() const{
+        return day;
+    }
+
+    string str() const{
+        return to_string(year) + "-" + to_string(month) + "-" + to_string(day);
+    }
 };
+
+bool inline operator<(const Date& lhs, const Date& rhs){
+    if(lhs.GetYear() == rhs.GetYear()){
+        if(lhs.GetMonth() == rhs.GetMonth()){
+            return lhs.GetDay() < rhs.GetDay();
+        }
+        return lhs.GetMonth() < rhs.GetMonth();
+    }
+    return lhs.GetYear() < rhs.GetYear();
+}
+
 class Database {
 private:
-    map<string, vector<string>> events;
-    int AssembleNumber(const string& res);
-    int GetYear(const string& date);
-    int GetMonth(const string& date);
-    int GetDay(const string& date);
-    void PrintEvents(const vector<string>& current);
-    bool FindStringInVector(const vector<string>& current, const string& event);
+    map<Date, vector<string>> events;
 public:
-    Database() = default;;
-    ~Database()= default;;
-
-    void Add(const string& date, const string& event);
-    string Delete(const string& date);
-    string Delete(const string& date, const string& event);
-    void Find(const string& date);
-    void Print();
+    void Add(const Date& data, const string& event);
+    void Delete(const Date& data, const string& event);
+    void Delete(const Date& data);
+    void Find(const Date& data) const;
+    void Print() const;
 };
 
 
