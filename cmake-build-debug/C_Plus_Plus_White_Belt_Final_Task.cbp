@@ -90,6 +90,12 @@
 		<Unit filename="C:/Studies/ISP/C-Plus-Plus-White-Belt-Final-Task/Database.h">
 			<Option target="C_Plus_Plus_White_Belt_Final_Task"/>
 		</Unit>
+		<Unit filename="C:/Studies/ISP/C-Plus-Plus-White-Belt-Final-Task/Date.cpp">
+			<Option target="C_Plus_Plus_White_Belt_Final_Task"/>
+		</Unit>
+		<Unit filename="C:/Studies/ISP/C-Plus-Plus-White-Belt-Final-Task/Date.h">
+			<Option target="C_Plus_Plus_White_Belt_Final_Task"/>
+		</Unit>
 		<Unit filename="C:/Studies/ISP/C-Plus-Plus-White-Belt-Final-Task/main.cpp">
 			<Option target="C_Plus_Plus_White_Belt_Final_Task"/>
 		</Unit>
